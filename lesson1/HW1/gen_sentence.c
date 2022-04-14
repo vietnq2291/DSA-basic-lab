@@ -30,7 +30,7 @@ int main(){
         printf("%s ", rand_word(noun, sizeof(noun)/sizeof(noun[0])));
         printf("%s ", rand_word(verb, sizeof(verb)/sizeof(verb[0])));
         printf("%s ", rand_word(prep, sizeof(prep)/sizeof(prep[0])));
-        printf("%s ", rand_word(article,sizeof(article)/sizeof(article[0])));
+        printf("%s ", rand_word(article, sizeof(article)/sizeof(article[0])));
         printf("%s", rand_word(noun, sizeof(noun)/sizeof(noun[0])));
         printf(".\n");
     }
