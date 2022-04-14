@@ -2,6 +2,12 @@
 const int SIZE = 20;
 
 int equal_array(int arr1[], int arr2[], int n){
+    /*
+     * return 1 if 2 arrays are equal
+     * return -1 if 2 arrays are symmetric
+     * return 0 otherwise
+     */
+
     for (int i = 0; i < n; i++){
         if (arr1[i] != arr2[i]){
             for (int j = 0; j < n; j++){
@@ -12,7 +18,6 @@ int equal_array(int arr1[], int arr2[], int n){
             return -1;
         }
     }
-
     return 1;
 }
 
