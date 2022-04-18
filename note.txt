@@ -3,4 +3,5 @@
 - File: 
 	+ Check if openning file is successful using IF == NULL
 	+ Use a variable to store path to file
+	+ Use fscanf, fprintf (IMPORTANT!!)
 - Array: define constant (ALWAYS!!)
