@@ -5,3 +5,9 @@
 	+ Use a variable to store path to file
 	+ Use fscanf, fprintf (IMPORTANT!!)
 - Array: define constant (ALWAYS!!)
+
+- malloc:
+	+ remember to use free(*ptr) (ONLY IF we don't use it anymore!)
+
+* Falure:
++ Pointers
