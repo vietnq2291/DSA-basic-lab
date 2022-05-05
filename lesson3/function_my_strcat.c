@@ -7,9 +7,11 @@ char *my_strcat(char *str1, char *str2){
     int len1, len2;
     char *result;
 
+    // get length of 2 strings
     len1 = strlen(str1);
     len2 = strlen(str2);
 
+    // allocate a memory of total length of 2 strings + 1 for '/0'
     result = (char *) malloc((len1 + len2 + 1) * sizeof(char));
 
     if (result == NULL){

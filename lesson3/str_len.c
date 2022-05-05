@@ -1,26 +1,39 @@
+/* 
+Read a file using fscanf() 
+then print content and length using fprintf() into another file
+*/
+
 #include<stdio.h>
-#include<stdlib.h>
 #include<string.h>
-#define MAX_LEN 100
 
-int main()
-{
+enum {SUCCESS, FAIL, MAX_LEN = 80};
+
+int main(){
     FILE *fin, *fout;
-    char str[MAX_LEN];
-    int len;
+    int reval = SUCCESS;
+    char fin_name[] = "input_strlen.txt",
+         fout_name[] = "output_strlen.txt";
 
-    if ((fin = fopen("input.txt", "r")) == NULL)
-    {
-        printf("File not found");
-    } else if ((fout = fopen("output.txt", "w")) == NULL){
-        printf("File not found");
+    // read files
+    if ((fin = fopen(fin_name, "r")) == NULL){
+        printf("Cannot open %s.\n", fin_name);
+        reval = FAIL;
+    } else if ((fout = fopen(fout_name, "w")) == NULL){
+        printf("Cannot open %s.\n", fout_name);
+        reval = FAIL;
     } else {
-        while (fgets(str, MAX_LEN, fin) != NULL)
-        {
-            len = strlen(str) - 1;
-            fprintf(fout, "%d %s\n", len, str);
-            printf("%s", str);
+        char str[MAX_LEN + 1];
+        int len=0;
+
+        while (fgets(str, MAX_LEN, fin)){
+            len += strlen(str);
+            fprintf(fout, "%s", str);
         }
+        fprintf(fout, "\n%d", len);
+        
+        fclose(fin);
+        fclose(fout);
     }
-    return 0;
+
+    return reval;
 }

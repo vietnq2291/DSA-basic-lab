@@ -2,26 +2,31 @@
 #include<stdlib.h>
 
 int main(){
-    int i, n, *p;
-    printf("How many numbers do you want to enter?\n");
+    int n, *p;
+
+    // get total number of integers
+    printf("How many numbers do you want to enter? ");
     scanf("%d", &n);
 
+    // allocate memory for n integers
     p = (int *) malloc(n * sizeof(int));
-    if (p == NULL)
-    {
+    if (p == NULL){
         printf("Memory allocation failed!\n");
         return 1;
     }
-    // Get the numbers from the user
+
+    // Get array of integers from user input
+    printf("Enter %d numbers: ", n);
     for (int i = 0; i < n; i++){
-        scanf("%d", p+i);
+        scanf("%d", &p[i]);
     }
 
-    // Display them in reverse
+    printf("Reversed order: ");
     for (int i = n-1; i >= 0; i--){
-        printf("%d ", *(p+i));
+        printf("%d ", p[i]);
     }
     printf("\n");
+    
     free(p);
     return 0;
 }
