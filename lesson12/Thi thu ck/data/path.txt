@@ -1,0 +1,8 @@
+A$B 20.1
+B$C1    5.5
+C1$DBP  0
+DBP$-TH 1.01
+-TH$P2  3
+:gnE$P2 1
+:gnE$P2 1
+B$C1    5.5
