@@ -375,6 +375,7 @@ void traverse_list(SingleList root) {
  *      In the function(SingleList *root, SingleList *cur, SingleList *prev)
  *          -> root = &root; cur = &cur; prev = &prev;
  *          -> access their values by (*root), (*cur), (*prev)
+ *                         ~ equivalent to root, cur, prev in main()
  *          -> or use them as pointers: root, cur, prev
  * - To get value without modifying them: pass by value: function(root, cur, prev)
  *      In the function(SingleList root, SingleList cur, SingleList prev)
